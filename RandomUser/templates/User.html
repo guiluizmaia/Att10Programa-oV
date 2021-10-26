@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{firstName}}</title>
+    <style type="text/css">
+        body {
+          background-color: #808080;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 6%;
+        }
+        h1 {
+            font-size: 80px;
+        }
+        img {
+            width: 350px;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="{{image}}">
+    <h1>{{firstName}} {{lastName}}</h1>
+         
+    {% if gender == 'male'%}
+        <h2>Genero: Masculino </h2>
+    {% else %}
+        <h2>Genero: Feminino </h2>
+    {% endif %}
+    <br>
+    <h2>Locação:  Rua {{street}}, {{number}}, {{city}}, {{state}}</h2>    
+</body>
+</html>
